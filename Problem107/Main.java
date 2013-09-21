@@ -1,12 +1,17 @@
 /**
+ * This problem ask the maximum saves from cutting edges from a graph, 
+ * which equals to the total weight of edges minus the minimum spanning 
+ * tree's weight (MST)
  * 
+ * The MST is implemented with Prim's Algorithm with total cost O(mn),
+ * Here m represents # of edges, and n represents # of vertices.
  */
 import java.io.BufferedReader;
 import java.io.FileReader;
 
 /**
  * @author antonio081014
- * @time Sep 11, 2013, 10:54:40 PM
+ * @time Sep 19, 2013, 10:54:40 PM
  */
 public class Main {
 
@@ -50,7 +55,7 @@ public class Main {
 	}
 
 	/**
-	 * -3612829;
+	 * 259679;
 	 * */
 	private void print_prims(MSTGraph<Integer> g, long total) {
 		System.out.println(total / 2 - g.MST_PRIMs(new Vertex<Integer>(1, 1)));
